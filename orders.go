@@ -167,7 +167,7 @@ type OrdersByUserResponse []struct {
 }
 
 // PatchOrder - Patch an existing order with a new one.
-func (c *Client) PatchOrder(ctx context.Context, uid string, signedOrder CounterOrder) (*string, int, error) {
+func (c *Client) PatchOrder(ctx context.Context, uid string, signedOrder *CounterOrder) (*string, int, error) {
 	if uid == "" {
 		return nil, 404, &ErrorCowResponse{Code: 404, ErrorType: "invalid_order_id", Description: "order UID not provided"}
 	}
