@@ -13,7 +13,7 @@
 To install the SDK with the `go get` command, run the following:
 
 ```bash
-go get github.com/itsahedge/go-cowswap
+go get github.com/amitbasuri/go-cowswap
 ```
 
 ## Getting Started

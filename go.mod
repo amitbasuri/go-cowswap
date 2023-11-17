@@ -1,4 +1,4 @@
-module github.com/itsahedge/go-cowswap
+module github.com/amitbasuri/go-cowswap
 
 go 1.19
 
