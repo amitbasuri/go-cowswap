@@ -165,3 +165,18 @@ type OrdersByUserResponse []struct {
 		Pre []interface{} `json:"pre"`
 	} `json:"interactions"`
 }
+
+// PatchOrder - Patch an existing order with a new one.
+func (c *Client) PatchOrder(ctx context.Context, uid string, signedOrder CounterOrder) (*string, int, error) {
+	if uid == "" {
+		return nil, 404, &ErrorCowResponse{Code: 404, ErrorType: "invalid_order_id", Description: "order UID not provided"}
+	}
+
+	endpoint := fmt.Sprintf("/orders/%s", uid)
+	var dataRes string
+	statusCode, err := c.doRequest(ctx, endpoint, "PATCH", &dataRes, signedOrder)
+	if err != nil {
+		return nil, statusCode, &ErrorCowResponse{Code: statusCode, ErrorType: "do_request_error", Description: err.Error()}
+	}
+	return &dataRes, statusCode, nil
+}
