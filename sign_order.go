@@ -2,11 +2,11 @@ package go_cowswap
 
 import (
 	"fmt"
+	"github.com/amitbasuri/go-cowswap/util/signature-scheme/eip712"
+	"github.com/amitbasuri/go-cowswap/util/signature-scheme/eth-sign"
 	"github.com/ethereum/go-ethereum/common"
 	"github.com/ethereum/go-ethereum/common/math"
 	"github.com/ethereum/go-ethereum/signer/core/apitypes"
-	"github.com/itsahedge/go-cowswap/util/signature-scheme/eip712"
-	"github.com/itsahedge/go-cowswap/util/signature-scheme/eth-sign"
 	"strings"
 )
 

@@ -2,10 +2,10 @@ package go_cowswap
 
 import (
 	"fmt"
+	"github.com/amitbasuri/go-cowswap/util/signature-scheme/eip712"
 	"github.com/ethereum/go-ethereum/common"
 	"github.com/ethereum/go-ethereum/common/math"
 	"github.com/ethereum/go-ethereum/signer/core/apitypes"
-	"github.com/itsahedge/go-cowswap/util/signature-scheme/eip712"
 )
 
 // SignCancelOrder - Sign a single order for cancellation & generate the order signature

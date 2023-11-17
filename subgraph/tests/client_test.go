@@ -1,8 +1,8 @@
 package tests
 
 import (
-	cowswap "github.com/itsahedge/go-cowswap"
-	"github.com/itsahedge/go-cowswap/subgraph"
+	cowswap "github.com/amitbasuri/go-cowswap"
+	"github.com/amitbasuri/go-cowswap/subgraph"
 	"testing"
 )
 
